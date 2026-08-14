@@ -96,6 +96,7 @@ class ZZZSpecialty(IntEnum):
     SUPPORT = 4
     DEFENSE = 5
     RUPTURE = 6
+    ARMORER = 7
 
 
 class ZZZElement(IntEnum):
