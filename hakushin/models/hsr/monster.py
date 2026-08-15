@@ -153,6 +153,7 @@ class Monster(APIModel):
     names: dict[Literal["en", "zh", "ko", "ja"], str]
     description: str = Field(alias="desc", default="")
     name: str = Field("")  # The value of this field is assigned in post processing.
+    rank: str
 
     @field_validator("description", mode="before")
     @classmethod
