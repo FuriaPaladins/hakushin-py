@@ -40,7 +40,7 @@ class Bangboo(APIModel):
     @classmethod
     def __convert_icon(cls, value: str) -> str:
         value = value.rsplit("/", maxsplit=1)[-1].split(".", maxsplit=1)[0]
-        return f"https://static.nanoka.cc/zzz/UI/{value}.webp"
+        return f"https://static.nanoka.cc/assets/zzz/{value}.webp"
 
     @field_validator("rarity", mode="before")
     @classmethod
@@ -160,7 +160,7 @@ class BangbooDetail(APIModel):
     @classmethod
     def __convert_icon(cls, value: str) -> str:
         value = value.rsplit("/", maxsplit=1)[-1].split(".", maxsplit=1)[0]
-        return f"https://static.nanoka.cc/zzz/UI/{value}.webp"
+        return f"https://static.nanoka.cc/assets/zzz/{value}.webp"
 
     @field_validator("rarity", mode="before")
     @classmethod

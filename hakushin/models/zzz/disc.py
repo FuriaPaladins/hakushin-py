@@ -57,7 +57,7 @@ class DriveDisc(APIModel):
     @classmethod
     def __convert_icon(cls, icon: str) -> str:
         filename = icon.rsplit("/", maxsplit=1)[-1].split(".", maxsplit=1)[0]
-        return f"https://static.nanoka.cc/zzz/UI/{filename}.webp"
+        return f"https://static.nanoka.cc/assets/zzz/{filename}.webp"
 
 
 class DriveDiscDetail(APIModel):
@@ -86,4 +86,4 @@ class DriveDiscDetail(APIModel):
     @classmethod
     def __convert_icon(cls, icon: str) -> str:
         filename = icon.rsplit("/", maxsplit=1)[-1].split(".", maxsplit=1)[0]
-        return f"https://static.nanoka.cc/zzz/UI/{filename}.webp"
+        return f"https://static.nanoka.cc/assets/zzz/{filename}.webp"

@@ -49,7 +49,7 @@ class Weapon(APIModel):
     @classmethod
     def __convert_icon(cls, value: str) -> str:
         """Convert the icon path to a full URL."""
-        return f"https://static.nanoka.cc/zzz/UI/{value}.webp"
+        return f"https://static.nanoka.cc/assets/zzz/{value}.webp"
 
     @model_validator(mode="before")
     @classmethod
@@ -208,7 +208,7 @@ class WeaponDetail(APIModel):
     def __convert_icon(cls, value: str) -> str:
         """Convert the icon path to a full URL."""
         value = value.rsplit("/", maxsplit=1)[-1].split(".", maxsplit=1)[0]
-        return f"https://static.nanoka.cc/zzz/UI/{value}.webp"
+        return f"https://static.nanoka.cc/assets/zzz/{value}.webp"
 
     @field_validator("rarity", mode="before")
     @classmethod
