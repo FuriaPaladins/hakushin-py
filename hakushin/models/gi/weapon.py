@@ -78,7 +78,7 @@ class WeaponDetail(APIModel):
     @field_validator("icon", mode="before")
     @classmethod
     def __convert_icon(cls, value: str) -> str:
-        return f"https://static.nanoka.cc/gi/UI/{value}.webp"
+        return f"https://static.nanoka.cc/assets/gi/{value}.webp"
 
 
 class Weapon(APIModel):
@@ -103,7 +103,7 @@ class Weapon(APIModel):
     @field_validator("icon", mode="before")
     @classmethod
     def __convert_icon(cls, value: str) -> str:
-        return f"https://static.nanoka.cc/gi/UI/{value}.webp"
+        return f"https://static.nanoka.cc/assets/gi/{value}.webp"
 
     @model_validator(mode="before")
     @classmethod

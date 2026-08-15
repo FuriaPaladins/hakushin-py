@@ -78,7 +78,7 @@ class LightConeDetail(APIModel):
     @property
     def icon(self) -> str:
         """Get the light cone's icon URL."""
-        return f"https://static.nanoka.cc/hsr/UI/lightconemediumicon/{self.id}.webp"
+        return f"https://static.nanoka.cc/assets/hsr/lightconemediumicon/{self.id}.webp"
 
     @computed_field
     @property
@@ -110,7 +110,7 @@ class LightCone(APIModel):
     @property
     def icon(self) -> str:
         """Get the light cone's icon URL."""
-        return f"https://static.nanoka.cc/hsr/UI/lightconemediumicon/{self.id}.webp"
+        return f"https://static.nanoka.cc/assets/hsr/lightconemediumicon/{self.id}.webp"
 
     @field_validator("description", mode="before")
     @classmethod
@@ -120,7 +120,7 @@ class LightCone(APIModel):
     @field_validator("icon", mode="before")
     @classmethod
     def __convert_icon(cls, value: str) -> str:
-        return f"https://static.nanoka.cc/hsr/UI/avatarshopicon/{value}.webp"
+        return f"https://static.nanoka.cc/assets/hsr/avatarshopicon/{value}.webp"
 
     @field_validator("rarity", mode="before")
     @classmethod

@@ -129,7 +129,7 @@ class MonsterDetail(APIModel):
     @property
     def icon(self) -> str:
         """Get the monster's icon URL."""
-        return f"https://static.nanoka.cc/hsr/UI/monsterfigure/Monster_{self.id}.webp"
+        return f"https://static.nanoka.cc/assets/hsr/monsterfigure/Monster_{self.id}.webp"
 
 
 class Monster(APIModel):
@@ -165,7 +165,7 @@ class Monster(APIModel):
     def __convert_icon(cls, value: str) -> str:
         filename = value.rsplit("/", 1)[-1]
         filename = filename.replace(".png", ".webp")
-        return f"https://static.nanoka.cc/hsr/UI/monsterfigure/{filename}"
+        return f"https://static.nanoka.cc/assets/hsr/monsterfigure/{filename}"
 
     @model_validator(mode="before")
     @classmethod

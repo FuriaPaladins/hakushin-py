@@ -91,7 +91,7 @@ class StygianEnemy(APIModel):
     @field_validator("icon", mode="after")
     @classmethod
     def __process_icon(cls, v: str) -> str:
-        return f"https://static.nanoka.cc/gi/UI/{v}.webp"
+        return f"https://static.nanoka.cc/assets/gi/{v}.webp"
 
     @model_validator(mode="before")
     @classmethod

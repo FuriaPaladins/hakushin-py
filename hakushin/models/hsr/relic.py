@@ -39,7 +39,7 @@ class Relic(APIModel):
         """Get the relic's icon URL."""
         relic_id = str(self.id)[1:4]
         part_id = str(self.id)[-1]
-        return f"https://static.nanoka.cc/hsr/UI/relicfigures/IconRelic_{relic_id}_{part_id}.webp"
+        return f"https://static.nanoka.cc/assets/hsr/relicfigures/IconRelic_{relic_id}_{part_id}.webp"
 
 
 class SetDetailSetEffect(APIModel):
@@ -90,7 +90,7 @@ class RelicSetDetail(APIModel):
     @classmethod
     def __convert_icon(cls, value: str) -> str:
         icon_id = value.rsplit("/", maxsplit=1)[-1].split(".", maxsplit=1)[0]
-        return f"https://static.nanoka.cc/hsr/UI/itemfigures/{icon_id}.webp"
+        return f"https://static.nanoka.cc/assets/hsr/itemfigures/{icon_id}.webp"
 
     @field_validator("set_effects", mode="before")
     @classmethod
@@ -164,7 +164,7 @@ class RelicSet(APIModel):
     @classmethod
     def __convert_icon(cls, value: str) -> str:
         icon_id = value.rsplit("/", maxsplit=1)[-1].split(".", maxsplit=1)[0]
-        return f"https://static.nanoka.cc/hsr/UI/itemfigures/{icon_id}.webp"
+        return f"https://static.nanoka.cc/assets/hsr/itemfigures/{icon_id}.webp"
 
     @field_validator("set_effect", mode="before")
     @classmethod

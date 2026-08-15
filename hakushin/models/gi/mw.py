@@ -33,7 +33,7 @@ class BaseMWCostume(APIModel):
     @field_validator("icon", mode="before")
     @classmethod
     def __icon_url(cls, v: str) -> str:
-        return f"https://static.nanoka.cc/gi/UI/{v}.webp"
+        return f"https://static.nanoka.cc/assets/gi/{v}.webp"
 
 
 class MWCostumeSet(BaseMWCostume):
@@ -62,4 +62,4 @@ class MWItem(APIModel):
     def __icon_url(cls, v: str) -> str | None:
         if not v:
             return None
-        return f"https://static.nanoka.cc/gi/UI/{v}.webp"
+        return f"https://static.nanoka.cc/assets/gi/{v}.webp"

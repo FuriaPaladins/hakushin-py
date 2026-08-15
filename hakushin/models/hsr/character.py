@@ -70,7 +70,7 @@ class Eidolon(APIModel):
         """Get the eidolon's image URL."""
         character_id = str(self.id)[:4]
         eidolon_index = str(self.id)[-1]
-        return f"https://static.nanoka.cc/hsr/UI/rank/_dependencies/textures/{character_id}/{character_id}_Rank_{eidolon_index}.webp"
+        return f"https://static.nanoka.cc/assets/hsr/rank/_dependencies/textures/{character_id}/{character_id}_Rank_{eidolon_index}.webp"
 
 
 class CharacterDetail(APIModel):
@@ -124,7 +124,7 @@ class CharacterDetail(APIModel):
     @property
     def icon(self) -> str:
         """Get the character's icon URL."""
-        return f"https://static.nanoka.cc/hsr/UI/avatarshopicon/{self.id}.webp"
+        return f"https://static.nanoka.cc/assets/hsr/avatarshopicon/{self.id}.webp"
 
     @property
     def gacha_art(self) -> str:
@@ -158,7 +158,7 @@ class Character(APIModel):
     @field_validator("icon", mode="before")
     @classmethod
     def __convert_icon(cls, value: str) -> str:
-        return f"https://static.nanoka.cc/hsr/UI/avatarshopicon/{value}.webp"
+        return f"https://static.nanoka.cc/assets/hsr/avatarshopicon/{value}.webp"
 
     @field_validator("rarity", mode="before")
     @classmethod

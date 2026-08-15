@@ -66,7 +66,7 @@ class Artifact(APIModel):
     @classmethod
     def __convert_icon(cls, value: str) -> str:
         """Convert the icon path to a full URL."""
-        return f"https://static.nanoka.cc/gi/UI/{value}.webp"
+        return f"https://static.nanoka.cc/assets/gi/{value}.webp"
 
 
 class ArtifactSetDetail(APIModel):
@@ -88,7 +88,7 @@ class ArtifactSetDetail(APIModel):
     @classmethod
     def __convert_icon(cls, value: str) -> str:
         """Convert the icon path to a full URL."""
-        return f"https://static.nanoka.cc/gi/UI/{value}.webp"
+        return f"https://static.nanoka.cc/assets/gi/{value}.webp"
 
     @field_validator("set_effect", mode="before")
     @classmethod
@@ -155,7 +155,7 @@ class ArtifactSet(APIModel):
     @classmethod
     def __convert_icon(cls, value: str) -> str:
         """Convert the icon path to a full URL."""
-        return f"https://static.nanoka.cc/gi/UI/{value}.webp"
+        return f"https://static.nanoka.cc/assets/gi/{value}.webp"
 
     @field_validator("set_effect", mode="before")
     @classmethod
